@@ -1,0 +1,649 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+
+:root {
+    /* Colores */
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+    width: 151px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header--title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.header--title-container h1 {
+    color: var(--just-white);
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+
+.header--title-container p {
+    color: var(--soft-orange);
+    font-size: 1.4rem;
+    font-weight: 500px;
+    line-height: 1.8rem;
+    margin-top: 25px;
+}
+
+.header--title-container .header--button {
+    position: absolute;
+    left: calc(50% - 118px);
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /* Sombra */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: var(--warm-black);
+}
+
+.header--button span {
+    display: inline-block;
+    height: 8px;
+    width: 12px;
+    margin-left: 10px;
+    margin-top: 9px;
+    border-radius: 0px;
+    background-image: url('./assets/Icons/flecha_abajo.svg');
+}
+
+main {
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.backgroundImg {
+    width: 195px;
+    height: 195px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('./assets/Imgs/bitcoin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-exchange-container h2 {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+
+.main-exchange-container p {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.main-monedas-table, .main-comisiones-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto; 
+    font-family: "Inter", sans-serif;
+}
+
+.main-monedas-table .monedas-table--title {
+    width: 81px;
+    height: 23px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+}
+
+.monedas-table--container, .comisiones-table--container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.monedas-table--container table {
+    width: 100%;
+    height: 100%;
+}
+
+.monedas-table--container td {
+    width: 50%;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: white;
+}
+
+.monedas-table--container .table__top-left, .comisiones-table--container .table__top-left1 {
+    border-radius: 15px 0 0 0 ;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.monedas-table--container .table__top-right, .comisiones-table--container .table__top-right1 {
+    border-radius: 0 15px 0 0 ;
+}
+
+.monedas-table--container .table__medium-left-first, .comisiones-table--container .table__medium-left-first1{
+    padding-left: 12px;
+    text-align: left;
+}
+
+.monedas-table--container .table__medium-left-second, .comisiones-table--container .table__medium-left-second1{
+    padding-left: 12px;
+    text-align: left;
+}
+
+.monedas-table--container .table__botton-left, .comisiones-table--container .table__botton-left1 {
+    border-radius: 0 0 0 15px;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.monedas-table--container .table__bottom-right, .comisiones-table--container .table__bottom-right1 {
+    border-radius: 0 0 15px 0;
+}
+
+.monedas-table--container .table__right, .comisiones-table--container .table__right1 {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.monedas-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/Icons/trending-down1.svg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.monedas-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/Icons/trending-up1.svg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.monedas-table--date {
+    margin: 0 auto;
+    margin-top: 16px;
+    background-color: var(--soft-orange);
+    padding: 8px;
+    border-radius: 8px;
+    width: 190px;
+    height: 31px;
+}
+
+.monedas-table--date p, .comisiones-table--date p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+
+.main-comisiones-table .comisiones-table--title {
+    width: 81px;
+    height: 23px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    margin-top: 60px;
+}
+
+.comisiones-table--container table {
+    width: 100%;
+    height: 100%;
+}
+
+.comisiones-table--container td {
+    width: 50%;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: white;
+}
+
+.comisiones-table--date {
+    margin: 0 auto;
+    margin-top: 16px;
+    background-color: var(--soft-blue);
+    padding: 8px;
+    border-radius: 8px;
+    width: 190px;
+    height: 31px;
+    margin-bottom: 60px;
+}
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+
+.product-detail--batata-logo {
+    position: absolute;
+    width: 40.57px;
+    height: 25px;
+    top: -10px;
+    left: calc(50% - 25px);
+    background-image: url(./assets/Icons/batata-logo.svg);
+}
+
+.product-detail--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+}
+
+.product-detail--title h2 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--just-white);
+    margin-top: 40px;
+}
+
+.product-detail--title p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #808080;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.product-detail--card {
+    width: 100%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--black);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+}
+
+.clock {
+    display: inline-block;
+    background-image: url(./assets/Icons/clock.svg);
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.product--card-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    margin-top: 12px;
+}
+
+.product--card-body {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+.eye {
+    display: inline-block;
+    background-image: url(./assets/Icons/eye.svg);
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.dollar {
+    display: inline-block;
+    background-image: url(./assets/Icons/dollar-sign.svg);
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.check {
+    display: inline-block;
+    background-image: url(./assets/Icons/check-circle.svg);
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.bitcoin-img-container {
+    width: 100%;
+    min-width: 320px;
+    height: 70vh;
+    background-image: url(./assets/Imgs/bitcoinbaby.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.bitcoin-img-container h2 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    padding-top: 64px;
+}
+
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    text-align: center;
+    background-color: var(--off-white);
+}
+
+.plans-title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 50px;
+}
+
+.plans-title h2 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+
+.plans-title p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+    margin-top: 24px;
+}
+
+.plans-container--slider {
+    display: flex;
+    gap: 30px;
+    height: 300px;
+    overflow-x: visible;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin: 0 15px;
+}
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.recomended {
+    position: absolute;
+    width: 101px;
+    height: 31px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    left: calc(50% - 50.5px);
+    top: calc(50% - 140px);
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--just-white);
+}
+
+.plan-card--title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #000000;
+    margin-top: 16px;
+}
+
+.plan-card--price {
+    font-weight: bold;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.08em;
+    color: #000000;
+}
+
+.plan-card--price span {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-right: 4px;
+    vertical-align: 30px;
+    color: #363636;
+}
+
+.plan-card--saving {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #757575;
+    padding: 0 16px 16px;
+}
+
+.plan-card--button {
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    left: calc(50% - 75.5px);
+    border: 2px solid #F7931A;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--warm-black);
+    text-align: center;
+}
+
+.plan-card--button span, .plan-card--button1 span, .plan-card--button2 span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/Icons/flecha_derecha_naranja.svg');
+    vertical-align: text-bottom;
+}
+
+.star {
+    position: absolute;
+    width: 130px;
+    height: 31px;
+    background-color: var(--secondary-blue);
+    border-radius: 8px;
+    left: calc(50% - 65px);
+    top: calc(50% - 140px);
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--just-white);
+}
+
+.plan-card--button1 {
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    left: calc(50% - 75.5px);
+    border: 2px solid #1A9AF7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--warm-black);
+    text-align: center;
+}
+
+.premium {
+    position: absolute;
+    width: 101px;
+    height: 31px;
+    background-color: #752633;
+    border-radius: 8px;
+    left: calc(50% - 50.5px);
+    top: calc(50% - 140px);
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--just-white);
+}
+
+.plan-card--button2 {
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    left: calc(50% - 75.5px);
+    border: 2px solid #752633;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--warm-black);
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+    padding-left: 15px;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+footer .footer-left ul {
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.footer-left li {
+    margin: 8px 0;
+}
+
+.footer-left a {
+    color: var(--just-white);
+    text-decoration: none;
+}
